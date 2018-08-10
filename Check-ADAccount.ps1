@@ -1,5 +1,7 @@
 ﻿function Check-ADAccount
 {
+    Write-Output "***This script will check if an Active Directory user account has been locked***"
+
     $Name = Read-Host "Enter a username to check"
     $User = Get-ADUser -Identity $Name -Properties LockedOut | Select LockedOut
 
